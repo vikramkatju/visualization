@@ -1,0 +1,92 @@
+---
+title: "Assignment 3 Part 2"
+author: "Vikram Katju"
+date: "2025-03-11"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r message = FALSE}
+library(tidyverse)
+```
+
+```{r}
+dat <- read.csv("resource_0.csv", 
+                header = TRUE)
+#str(dat)
+dat_fig <- dat %>% select(c(AREA_NAME, ASSAULT_RATE_2024))
+
+names(dat_fig) <- c("AREA", "2024")
+#str(dat_fig)
+
+#names(dat_fig$AREA)
+
+dat_fig <- dat_fig %>%
+  arrange(desc(`2024`)) %>%
+  slice_head(n = 7)
+
+#print (dat_fig)
+#str(dat_fig)
+dat_fig$`2024` <- round(dat_fig$`2024`)
+#print (dat_fig)
+
+dat_fig$AREA <- as.factor(dat_fig$AREA)
+#str(dat_fig)
+dat_fig$AREA <- as.factor(dat_fig$AREA)
+#str(dat_fig)
+```
+
+```{r}
+ggplot(dat_fig, aes(x = AREA, y = `2024`, fill = AREA)) +
+  geom_bar(stat = "identity", width = 1) + 
+  theme_minimal() +
+  theme(
+    axis.text.x = element_blank(), #remove x axis labels
+    axis.text.y = element_blank(),  # Remove y-axis labels
+    axis.ticks = element_blank(),   # Remove ticks
+    panel.grid = element_blank(),    # Remove grid lines
+    legend.title = element_text(size = 10, face = "bold",
+                                family = "sans"),  # Customize legend title
+    legend.text = element_text(size = 8,
+                               family = "sans")  # Customize legend text,
+    
+  ) +
+  
+  labs (x = "",
+        y = "",
+        #title = "(Relatively) Dangerous Toronto Neighborhoods",
+        fill = "(Relatively) Dangerous\nToronto Neighborhoods") +
+  scale_fill_brewer(palette = "Set2") +
+  coord_polar(theta = "x", start = 0, direction = -1) +
+  geom_text(aes(y = `2024`, label = `2024`),
+            color = "black")
+```
+
+
+The data was obtained using the API provided by the City of Toronto's Open Data portal. It was retrieved using a 
+Python script used in the first part of this assignment.
+The retrieved data was placed in the file resource_0.csv
+and this is the file being used in this analysis. 
+
+The software used is R in conjuction with the tidyverse
+library which is a suite of libraries containing the 
+dplyr and ggplot libraries, both of which are used in this program.
+
+The audience comprises anyone interested in Assault rates in Toronto including journalists, law enforcement officers, researchers, and others. 
+
+This plot identifies the 7 (out of 158) neighborhoods in
+Toronto with the maximum number of Assault incidents in
+2024 through the usage of a Coxcomb plot.
+
+The visual layout makes the plot aesthetically appealing. The simplicity of the plot makes it perceptual although note the complexities in this plot: the plot tells us the rate of Assaults in 2024 where rate is defined as the number of assaults per 100,000 people (this is the number label seen on each wedge), and the size of each wedge in the plot corresponds to its rate value. The plot is substantive in that it honestly and accurately depicts the information it is representing.
+
+Reproducability was ensured by downloading the dataset using the API given for the Neighborhood Crime Rates Data at the City of Toronto's Open Data portal as seen in Part 1 of this assignment. The figure itself was constructed using R and the tidyverse suite of libraries in a markdown file format thus making the whole exercise reproducable. The color palette used is suitable for color blind people thereby making the figure more accessible. 
+
+
+This plot should be of some interest to anyone residing in Toronto or visiting the city of Toronto regularly. 
+
+Out of all the information in the dataset, Assault Rates were focussed on in this figure since they seemed to be a good indicator of crime rate.
+
+With respect to 'underwater labor', a tip of the hat to those who collected this data and posted it online. 
+
