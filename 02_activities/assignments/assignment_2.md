@@ -10,7 +10,40 @@
 - For each visualization (good and bad):  
     - Explain (with reference to material covered up to date, along with readings and other scholarly sources, as needed) why you classified that visualization the way you did.
       ```
-      Your answer...
+      An example of a good visualization is this one:
+      
+      https://www.bib.bund.de/EN/Service/Tools/Migration/Globalflows.html
+      
+      (Note that a previous iteration of this visualization was published in the journal 'Science':
+      http://download.gsb.bund.de/BIB/global_flow/
+      )
+      
+      The visualization is a good one because it encompasses a tremendous amount of information, with
+      respect to global migration, in a single diagram in a concise manner. One can say that it is substantive
+      since it is accurately and honestly portraying the data it is representing visually. One can also say
+      that it is aesthetic in that the circular layout of the figure provides for a pleasing visualization. One
+      could argue that the figure is perceptual in that it contains the message its maker is attempting to
+      convey with the caveat that its audience is meant to be experts or at least those with some technical 
+      background. This visualization would be appropriate for an academic journal or poster for reasons 
+      stated above, particularly if for reasons of space only one or two figures are permitted. Alternatively,
+      the visualization would be suitable for a report providing the reader has sufficient technical background
+      to interpret the information contained in it effectively. 
+      
+      An example of a bad visualization is Exhibit 16, page 11 in this document:
+      https://www.goldmansachs.com/images/migrated/insights/pages/gs-research/womenomics-25-years-and-the-quiet-revolution/Womenomics_redacted%20version.pdf
+      
+      This visualization comprises two side by side scatterplots of Fertility rate (per female) versus Female labor force 
+      participation rate, the first figure for the year 1980 and the second figure for the year 2022. There are many
+      problematic features in this visualization some of which I give here. First, both the x axis and y axis scale 
+      intervals are different in the two figures. This makes any meaningful comparison of the two figures impossible.
+      Second, the figure for 1980 is showing a downward trend while the figure for 2022 is showing an upward trend,
+      with the trend line represented by the dotted line, indicating that there was a negative association between fertility 
+      rate and female labor force participation in 1980 but a positive association between fertility rate and
+      female labor force participation. This is difficult to believe, however, considering the overall fertility for specific
+      countries has either remained about the same (as in the case of Germany or France) or else has declined
+      significantly (as in the case of Spain or Portugal). As an example of the difference using different scale intervals is making,
+      Germany is near the bottom of the figure for 1980 and slightly above the middle of the figure for 2022 even
+      though the fertility rate for the country has remained the same as per the two figures.       
 
 
 
@@ -21,7 +54,25 @@
       ```
     - How could this data visualization have been improved?  
       ```
-      Your answer...
+      The 'good visualization' could be improved in the following ways. First, the data could be filtered and/or
+      aggregated. Unnecessary or less important connections could be removed and similar connections could 
+      be grouped together so as to reduce clutter. Second, the most significant relationships or patterns could be 
+      highlighted so as to prevent the viewer from being overwhelmed by data overload. Third, a high-contrast 
+      color palette, accessible to the color blind while at the same time being distinctive and aesthetically pleasing
+      could be used instead of the colors used in the figure. Examples of such color palettes are IBM, Wong, 
+      and Tol:
+        
+      https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40
+      
+      The 'bad visualization' could be improved significantly by ensuring that the interval scales for the figures for
+      1980 and 2022 are the same so as to make a meaningful comparison possible. For the 2022 figure, countries
+      whose fertility rates has remained the same, or has increased, or has decreased could be represented by 
+      solid dots of different colors to increase interpretability and enhance understanding of the underlying data.
+      It may also be useful to consider some other type of plot to represent this data. For instance, a single bar plot
+      with bars for 1980 and 2022 placed adjacent to one another for each country might depict the underlying
+      data in a more perceptual manner than the two plots being used in Exhibit 16.
+
+      
 
 
 
